@@ -11,7 +11,7 @@ export default function Home(props: any) {
 	return (
 		<>
 			<Head>
-				<title key={1}>{credentials.platform.title}</title>
+				<title>{credentials.platform.title}</title>
 				<meta name="description" content={credentials.platform.description} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
