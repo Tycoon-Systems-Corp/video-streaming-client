@@ -179,6 +179,14 @@
 
 .thumbnailTitle {
     margin: .5rem 0;
+    white-space: break-spaces;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: .8rem;
 }
 
 .floodMediaContainer {
