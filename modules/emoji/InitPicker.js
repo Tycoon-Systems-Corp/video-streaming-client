@@ -1,0 +1,1 @@
+import data from"@emoji-mart/data";import{init}from"emoji-mart";init({data:data});const Component=t=>{var[,,]=React.useState({});return React.createElement("div",{className:"EmojiPicker_InitContainer"},React.createElement("div",null))};export default Component;
