@@ -40,7 +40,11 @@ const Module = props => {
             const value = e?.currentTarget?.value ?? ''
             if (props?.domainUrl) {
                 const useUrl = props?.devAddress ? `${props.devAddress}/s?v=${value}` : `https://${props.domainUrl}/s?v=${value}`
-                router.reload(useUrl)
+                if (router.pathname === '/s') {
+                    router.reload()
+                } else {
+                    router.push(useUrl)
+                }
             }
         }
     })
