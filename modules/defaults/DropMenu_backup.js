@@ -47,6 +47,7 @@ const Module = props => {
                                     <OnboardLogin { ...props } />
                                     <div style={{ borderTop: '1px solid grey', margin: '.25rem 0' }}></div>
                                     <GoLive { ...props } />
+                                    <Upload { ...props } />
                                     <Invite { ...props } />
                                     <div style={{ borderTop: '1px solid grey', margin: '.25rem 0' }}></div>
                                     <Help { ...props } />
