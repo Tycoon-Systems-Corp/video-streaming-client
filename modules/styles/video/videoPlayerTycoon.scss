@@ -327,6 +327,7 @@ button.vjs-button:hover {
 }
 
 .video-js .vjs-big-play-button {
+    left: calc(50% + 40px);
     transition: 200ms;
     animation-name: attentionplay;
     animation-duration: 2s;
