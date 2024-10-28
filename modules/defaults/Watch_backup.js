@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Player, Prompt } from '/modules/streaming/watch'
+import { Player } from '/modules/streaming/watch'
 import { Chat } from '/modules/streaming/chat'
 import DonateButton from '/modules/ecommerce/donate/DonateButton'
 import { CommentInternal } from '/modules/comment'
@@ -23,7 +23,7 @@ const Module = props => {
                                         <h3 className={`${props?.WatchPageStyles?.title}`}>{props?.watchMeta?.title ?? ''}</h3>
                                         <div className={`${props?.WatchPageStyles?.metaContainerInner} gap-p10`}>
                                             <div className={`${props?.WatchPageStyles?.metaAuthorMetaContainer} gap-p10`}>
-                                                <Link href={`/p?u=${props?.watchMeta?.authorData?.id}`} style={{ display: 'block' }}>
+                                                <Link href={`/p?u=${props?.watchmeta?.authorData?.id}`} style={{ display: 'block' }}>
                                                     <img className={`${props?.WatchPageStyles?.watchIcon}`} src={`${props?.watchMeta?.authorData?.icon ?? 'img/default/greyIcon.png'}`} />
                                                 </Link>
                                                 <div>
@@ -38,6 +38,13 @@ const Module = props => {
                                                 </div>
                                             </div>
                                         </div>
+                                        {
+                                            props?.watchMeta?.date?.date 
+                                                ? <div className={`${props.WatchPageStyles?.dateContainer}`}>
+                                                    <p>{props.watchMeta.date.month} {props.watchMeta.date.date}{props.watchMeta.date.suffix}, {props.watchMeta.date.year}, {props.watchMeta.date.time}</p>
+                                                </div>
+                                                : null
+                                        }
                                         {
                                             props?.watchMeta?.description !== ''
                                                 ? <p style={{ marginTop: '1rem', fontSize: '.9rem' }}>{props.watchMeta.description}</p>
