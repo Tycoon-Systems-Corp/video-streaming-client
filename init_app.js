@@ -470,7 +470,7 @@ if (fs.existsSync(useFile)) {
     // Add your commands here
     console.log(useFile, 'File exists on', process.platform)
 } else {
-    fs.copyFileSync('modules/defaults/VideoReel_backup.js', useFile)
+    fs.copyFileSync('modules/defaults/upload/VideoReel_backup.js', useFile)
     console.log(useFile, 'File does not exist on', process.platform)
 }
 
