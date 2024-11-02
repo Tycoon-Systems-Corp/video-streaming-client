@@ -78,6 +78,7 @@
 @import "./supporting/Article.scss";
 @import "./supporting/Invoice.scss";
 @import "./supporting/Menu.scss";
+@import "./supporting/Ads.scss";
   
 body .opacity1 {
     opacity: 1;
@@ -1500,4 +1501,8 @@ input.squeezedInputWider {
 
 .searchBarActive {
     outline: 3px solid grey;
+}
+
+.no_pointer_events {
+    pointer-events: none;
 }
