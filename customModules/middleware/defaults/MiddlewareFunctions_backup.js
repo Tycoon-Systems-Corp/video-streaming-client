@@ -13,8 +13,8 @@ const transformMeta = (router, items, props) => {
     return items
 }
 
-const manualAllowResourceAuth = (props, asPath, query, resource) => {
-
+const manualAllowResourceAuth = (props, asPath, query, user, resource) => {
+    
     return true
 }
 
