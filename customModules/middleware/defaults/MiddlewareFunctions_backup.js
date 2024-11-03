@@ -11,16 +11,16 @@ const transformMeta = (router, items, props) => {
     // Use router to determine what page you are on.
     // use data in props
     return items
-}
+  }
+  
+  const manualAllowResourceAuth = (props, asPath, query, user, preAuth, resource) => {
 
-const manualAllowResourceAuth = (props, asPath, query, user, resource) => {
-    
     return true
-}
-
-const functions = {
+  }
+  
+  const functions = {
   manualAllowResourceAuth,
   transformMeta
-}
-
-export default functions
+  }
+  
+  export default functions
