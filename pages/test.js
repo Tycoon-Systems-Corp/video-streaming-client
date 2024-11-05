@@ -13,7 +13,7 @@ export const page = props => {
 	return (
         <React.Fragment>
             {
-                props.dev
+                props.dev || (props?._loggedIn?.admin?.adminc?.access === 'full' && props?._loggedIn?.admin?.adminc?.admin)
                 ? <PageContainer { ...props } pageName={pageName}>
                     <Menu></Menu>
                     <AppConfigLayout></AppConfigLayout>
