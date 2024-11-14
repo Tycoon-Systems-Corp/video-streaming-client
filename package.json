@@ -3,6 +3,7 @@
   "version": "0.5.54",
   "scripts": {
     "dev": "next dev -p 3020",
+    "https": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
