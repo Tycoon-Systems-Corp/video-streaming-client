@@ -363,3 +363,30 @@ button.vjs-button:hover {
 button.vjs-control {
     cursor: pointer;
 }
+
+.WatchPage_VideoContainer {
+    position: relative;
+    .vjs-control-bar {
+        z-index: 15;
+    }
+    .Overlay_Container {
+        .shadowOverlay {
+            background: linear-gradient(to top, rgba(0,0,0,1) 5%, transparent 10%, transparent 100%);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+            opacity: 0;
+            transition: 300ms;
+        }
+    }
+}
+
+.WatchPage_VideoContainer:hover {
+    .Overlay_Container {
+        .shadowOverlay {
+            opacity: 1;
+        }
+    }
+}
