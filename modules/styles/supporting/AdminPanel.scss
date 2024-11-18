@@ -15,14 +15,15 @@
 }
 
 
-@media(max-width: 450px) {
+@media(max-width: 550px) {
     .AdminPanel_Container {
         min-width: 200px;
-        max-width: 100vw;
+        max-width: calc(90vw - 2rem);
     }
 }
 
 .AdminPanel_ContainerOpen {
+    max-width: 90vw;
     height: 90vh;
     border: 1px solid grey;
     box-shadow: inset 0 0 7.5px #5c5c5c;
