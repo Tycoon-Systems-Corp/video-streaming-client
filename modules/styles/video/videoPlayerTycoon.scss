@@ -408,3 +408,8 @@ button.vjs-control {
     }
 }
 
+@media (max-width: 450px) {
+    .video-js .vjs-time-control {
+        width: 50px;
+    }
+}
