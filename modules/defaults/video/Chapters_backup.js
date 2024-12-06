@@ -20,11 +20,14 @@ const Module = props => {
                                 <div key={i} className={`${WatchPageStyles.thumbnailContainer} Thumbnail_Container ${WatchPageStyles.ChapterContainer} Chapter_ChapterContainer`} onClick={props?.seekChapter} modif={i}>
                                     <div className={`${WatchPageStyles.thumbnail} Thumbnail_Thumbnail`} style={{ background: `url(${props?.cdn?.static && m?.media[0] ? `${props.cdn.static}/thumbtrack/${m.media}` : 'img/default/greythumb.jpg'}) no-repeat center/cover` }}>
                                     </div>
-                                    {
-                                        !isNaN(m?.startOffset)
-                                            ? <div className={`${WatchPageStyles.ChapterTime} Chapter_ChapterTime`} style={{ marginTop: '.25rem' }}>{secondsToHMSString(m?.startOffset)}</div>
-                                            : ''
-                                    }
+                                    <div className={`${WatchPageStyles.ChapterTimeContainer} Chapter_ChapterTimeContainer`}>
+                                        {
+                                            !isNaN(m?.startOffset)
+                                                ? <div className={`${WatchPageStyles.ChapterTime} Chapter_ChapterTime`} style={{ marginTop: '.25rem' }}>{secondsToHMSString(m?.startOffset)}</div>
+                                                : ''
+                                        }
+                                        <div className={`${WatchPageStyles.ChapterLineThrough} Chapter_ChapterLineThrough ${i === props.hydratedTimeline.length -1 ? `${WatchPageStyles.ChapterLineThroughLast} Chapter_ChapterLineThroughLast` : ''}`}></div>
+                                    </div>
                                     <h4 className={`${WatchPageStyles.thumbnailTitle}`}>{m?.name ?? ''}</h4>
                                 </div>
                             ))

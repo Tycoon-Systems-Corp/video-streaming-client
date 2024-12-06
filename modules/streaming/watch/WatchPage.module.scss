@@ -331,6 +331,11 @@
     border-radius: 1rem;
     width: auto;
     cursor: pointer;
+    margin-bottom: .25rem;
+}
+
+.ChapterTimeContainer {
+    position: relative;
 }
 
 .LoadReplies:not(:disabled):hover, .ChapterContainer:hover {
@@ -341,12 +346,26 @@
 }
 
 .ChapterTime {
-    font-size: .85rem;
+    font-size: .8rem;
     margin-top: 0.25rem;
-    background: rgba(128, 128, 128, .25);
+    background: rgba(64, 64, 64, 1);
     width: max-content;
     padding: .125rem .25rem;
     border-radius: .25rem;
+    position: relative;
+    z-index: 10;
+}
+
+.ChapterLineThrough {
+    width: 125%;
+    height: 1px;
+    background: rgba(64, 64, 64, 1);
+    position: absolute;
+    top: 10px;
+}
+
+.ChapterLineThroughLast {
+    width: 0%;
 }
 
 .clipStart {
