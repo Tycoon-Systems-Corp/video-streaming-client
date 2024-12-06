@@ -319,7 +319,7 @@
 }
 
 .ChaptersExternalContainer {
-    max-width: 98vw;
+    max-width: calc(100vw - 2.5rem);
 }
 
 .ChaptersListContainer {
