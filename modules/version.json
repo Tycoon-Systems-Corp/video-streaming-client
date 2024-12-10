@@ -1,11 +1,6 @@
 {
   "name": "TYCOON SYSTEMS Streaming Platform Client Modules",
   "author": "TYCOON SYSTEMS Corp.",
-<<<<<<< HEAD
-  "version": "0.9.5",
-  "buildDate": "2024-12-10T07:05:50.645Z"
-=======
-  "version": "0.9.4",
-  "buildDate": "2024-12-08T18:59:13.482Z"
->>>>>>> refs/remotes/origin/master
+  "version": "0.9.6",
+  "buildDate": "2024-12-10T07:08:04.505Z"
 }
