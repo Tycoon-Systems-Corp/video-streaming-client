@@ -37,7 +37,6 @@ const Module = props => {
                 {
                     Object.entries(useOverlayMatrix).map((m, i) => {
                         const item = m?.[1][(props?.overlayMatrixState?.offset ?? 0) % m[1].length]
-                        console.log(item)
                         if (item) {
                             return (
                                 <div className={`MatrixOverlay_Section MatrixOverlay_Section_${m[0]}`} key={i}>
