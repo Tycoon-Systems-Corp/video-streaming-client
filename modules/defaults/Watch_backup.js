@@ -9,7 +9,6 @@ import { LoadComments } from '/modules/comment/parts'
 const Module = props => {
     return (
         <div className={`${props?.WatchPageStyles?.videoQuadrant} WatchPage_VideoQuadrant ${props?.simplifiedPlayer ? 'Watch_SimplifiedPlayerContainerQuadrant' : ''}`} style={{ height: `calc(100vh - ${props?.menuHeight})` }}>
-            <Prompt { ...props } />
             {
                 props?.simplifiedPlayer
                     ? <div className={`${props?.WatchPageStyles?.videoExternalContainer} Watch_SimplifiedPlayerContainer`}>

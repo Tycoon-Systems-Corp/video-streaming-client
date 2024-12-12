@@ -1607,3 +1607,101 @@ input.squeezedInputWider {
     opacity: 1;
     display: block;
 }
+
+#ad-container {
+    z-index: 50;
+}
+
+.MatrixOverlay_Container {
+    transition: 200ms;
+    .MatrixOverlay_Section {
+        position: absolute;
+        border-radius: 1rem;
+        box-shadow: inset 0 0 7.5px #5c5c5c;
+        border: 2px solid rgba(128, 128, 128, .5);
+        background: rgba(0, 0, 0, 0.5);
+        font-size: 1rem;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        overflow: auto;
+    }
+    .MatrixOverlay_Item {
+        padding: .5rem;
+    }
+    .MatrixOverlay_lead {
+        font-weight: 600;
+    }
+    .MatrixOverlay_textContainer {
+        text-align: center;
+    }
+    .MatrixOverlay_Section_np, .MatrixOverlay_Section_sp {
+        z-index: 20;
+        width: 80%;
+        left: 10%;
+    }
+    .MatrixOverlay_Section_np {
+        top: 10%;
+    }
+    .MatrixOverlay_Section_sp {
+        bottom: 10%;
+    }
+    .MatrixOverlay_Section_q1, .MatrixOverlay_Section_q2, .MatrixOverlay_Section_q3, .MatrixOverlay_Section_q4 {
+        z-index: 19;
+        height: 45%;
+        width: 45%;
+    }
+    .MatrixOverlay_Section_q1 {
+        top: 2.5%;
+        left: 2.5%;
+    }
+    .MatrixOverlay_Section_q2 {
+        top: 2.5%;
+        right: 2.5%;
+    }
+    .MatrixOverlay_Section_q3 {
+        bottom: 2.5%;
+        left: 2.5%;
+    }
+    .MatrixOverlay_Section_q4 {
+        bottom: 2.5%;
+        right: 2.5%;
+    }
+    .MatrixOverlay_Section_n, .MatrixOverlay_Section_s {
+        z-index: 18;
+        height: 45%;
+        width: 90%;
+    }
+    .MatrixOverlay_Section_w, .MatrixOverlay_Section_e {
+        z-index: 17;
+        height: 90%;
+        width: 45%;
+    }
+    .MatrixOverlay_Section_n, .MatrixOverlay_Section_w {
+        left: 2.5%;
+        top: 2.5%;
+    }
+    .MatrixOverlay_Section_s {
+        left: 2.5%;
+        bottom: 2.5%;
+    }
+    .MatrixOverlay_Section_e {
+        top: 2.5%;
+        right: 2.5%;
+    }
+    .MatrixOverlay_Section_wp, .MatrixOverlay_Section_ep {
+        z-index: 16;
+        height: 60%;
+        width: 35%;
+        top: 20%;
+    }
+    .MatrixOverlay_Section_wp {
+        left: 2.5%;
+        top: 20%;
+    }
+    .MatrixOverlay_Section_ep {
+        right: 2.5%;
+    }
+    img {
+        width: 100%;
+    }
+}
