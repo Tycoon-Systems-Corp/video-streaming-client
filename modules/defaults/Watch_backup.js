@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Player, Prompt, ChaptersContainer } from '/modules/streaming/watch'
+import { Player, ChaptersContainer } from '/modules/streaming/watch'
 import { Chat } from '/modules/streaming/chat'
 import DonateButton from '/modules/ecommerce/donate/DonateButton'
 import { CommentInternal } from '/modules/comment'

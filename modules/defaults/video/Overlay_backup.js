@@ -1,5 +1,7 @@
 import React from 'react'
 import WatchPageStyles from '/modules/streaming/watch/WatchPage.module.scss'
+import { westernMoneyFormat } from '/modules/utility/ecommerce'
+import { fireGlobalEvent } from '/modules/utility/utility'
 
 
 /**
@@ -22,6 +24,10 @@ const Module = props => {
             setIteration(iteration + 1)
             setUseOverlayMatrix(e.data)
         }
+    })
+
+    const handleFireGlobalEvent = React.useCallback(async e => {
+        fireGlobalEvent(e, props._LocalEventEmitter)
     })
 
     return (
@@ -76,7 +82,56 @@ const Module = props => {
                                                             : null
                                                     }
                                                 </div>
-                                            : null
+                                            : item?.sectionType === 'product'
+                                                ? <div className='MatrixOverlay_productContainer'>
+                                                    {
+                                                        item?.media
+                                                            ? <div className='MatrixOverlay_img'>
+                                                                <img src={`${item.media}`} />
+                                                            </div>
+                                                            : null
+                                                    }
+                                                    <div className='MatrixOverlay_Content'>
+                                                        <div className='MatrixOverlay_section'>
+                                                            {
+                                                                item?.lead ?? item?.name
+                                                                    ? <div className='MatrixOverlay_lead'>{item.lead ?? item?.name}</div>
+                                                                    : null
+                                                            }
+                                                            {
+                                                                item?.description
+                                                                    ? <div className='MatrixOverlay_description'>{item.description}</div>
+                                                                    : null
+                                                            }
+                                                        </div>
+                                                        <div className='MatrixOverlay_section'>
+                                                            {
+                                                                item?.ticketLead
+                                                                    ? <div className='MatrixOverlay_ticketLead'>{item.ticketLead}</div>
+                                                                    : null
+                                                            }
+                                                            {
+                                                                item?.ticketDescription
+                                                                    ? <div className='MatrixOverlay_ticketDescription'>{item.ticketDescription}</div>
+                                                                    : null
+                                                            }
+                                                            {
+                                                                item?.price
+                                                                    ? <div style={{ alignItems: 'center', display: 'flex', gap: '.5rem', marginTop: '1rem' }}>
+                                                                        <div>
+                                                                            <button onClick={handleFireGlobalEvent} item={item?.product?.id} selectedstyle={item?.product?.styles?.[0]?.sid} currentoption={item?.product?.styles?.[0]?.option?.[0]?.sid} action='add_to_cart'>Get Tickets</button>
+                                                                        </div>
+                                                                        <div style={{ fontSize: '1rem', fontWeight: 600 }}>
+                                                                            <span>{item?.price?.symbol ?? null}</span>
+                                                                            <span>{westernMoneyFormat.format(item?.price?.price) ?? '0'} {item?.price?.currency ?? ''}</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    : null
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                : null
                                         }
                                         <div></div>
                                     </div>
@@ -87,7 +142,7 @@ const Module = props => {
                     })
                 }
             </div>
-            <div className='shadowOverlay'></div>
+            <div className={`shadowOverlay`}></div>
         </div>
     )
 }

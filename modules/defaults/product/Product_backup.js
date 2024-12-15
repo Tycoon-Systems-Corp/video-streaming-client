@@ -50,7 +50,7 @@ const Module = props => {
                                         {
                                             validStyleObject && (currentDefinePriceCurrency?.currency === 'USD' && validStyleObject?.price != props?.priceInput?.current?.value)
                                                 || (currentDefinePriceCurrency?.currency !== 'USD'
-                                                    && (!validStyleObject.priceTable || (validStyleObject.priceTable && !validStyleObject.priceTable[currentDefinePriceCurrency.currency]) || (props?.currentDefinePriceCurrency?.currency && validStyleObject.priceTable && Object.prototype.hasOwnProperty.call(validStyleObject.priceTable, currentDefinePriceCurrency.currency) && validStyleObject.priceTable[currentDefinePriceCurrency.currency] != props.priceInput.current.value)))
+                                                    && (!validStyleObject?.priceTable || (validStyleObject.priceTable && !validStyleObject.priceTable[currentDefinePriceCurrency.currency]) || (props?.currentDefinePriceCurrency?.currency && validStyleObject.priceTable && Object.prototype.hasOwnProperty.call(validStyleObject.priceTable, currentDefinePriceCurrency.currency) && validStyleObject.priceTable[currentDefinePriceCurrency.currency] != props.priceInput.current.value)))
                                                 ? <Tooltip title="The price displayed is currently not set for this product style. Click here to set it">
                                                     <button onClick={setCurrentPrice} value={props.priceInput?.current?.value} style={{ whiteSpace: 'nowrap', lineHeight: '.5rem', fontSize: '.75rem' }}>Set Price</button>
                                                 </Tooltip>

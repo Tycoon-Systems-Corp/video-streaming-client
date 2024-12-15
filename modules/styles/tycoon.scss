@@ -1688,20 +1688,67 @@ input.squeezedInputWider {
         top: 2.5%;
         right: 2.5%;
     }
-    .MatrixOverlay_Section_wp, .MatrixOverlay_Section_ep {
+    .MatrixOverlay_Section_wp, .MatrixOverlay_Section_ep, .MatrixOverlay_Section_cp {
         z-index: 16;
-        height: 60%;
-        width: 35%;
-        top: 20%;
+        height: 55%;
+        width: 30%;
+        top: 22.5%;
     }
     .MatrixOverlay_Section_wp {
         left: 2.5%;
-        top: 20%;
     }
     .MatrixOverlay_Section_ep {
         right: 2.5%;
     }
+    .MatrixOverlay_Section_cp {
+        height: 65%;
+        width: 80%;
+        left: 10%;
+    }
     img {
         width: 100%;
     }
+    .MatrixOverlay_productContainer {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        height: 100%;
+        .MatrixOverlay_Content {
+            margin: auto 0;
+        }
+        .MatrixOverlay_section {
+            margin-bottom: 1rem;
+            max-width: 300px;
+        }
+        .MatrixOverlay_description, .MatrixOverlay_ticketDescription {
+            color: #d2d2d2;
+        }
+        .MatrixOverlay_img {
+            img {
+                border-radius: 1rem;
+                height: 300px;
+                max-height: 100%;
+                width: auto;
+            }
+        }
+    }
+    .MatrixOverlay_Item_authProduct {
+        height: 100%;
+    }
+}
+
+.WatchPage_IsNotAuthorizedVideoPlayer .vjs-tech, .WatchPage_IsNotAuthorizedVideoPlayer .vjs-tech *, .WatchPage_IsNotAuthorizedVideoPlayer .vjs-control *, .WatchPage_IsNotAuthorizedVideoPlayer .vjs-slider {
+    pointer-events: none;
+}
+
+.Watch_PlayerNoAuthorization:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background: black;
+    height: 100%;
+    width: 100%;
 }
