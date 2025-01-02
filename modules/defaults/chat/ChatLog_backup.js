@@ -2,6 +2,7 @@ import React from 'react'
 import ChatStyles from '/modules/streaming/chat/Chat.module.scss'
 import Reply from '@mui/icons-material/Reply'
 import ArrowUpward from '@mui/icons-material/ArrowUpward'
+import { resolveImage } from '/modules/utility/utility/image'
 
 const Module = props => {
     const { chatLog, scrollChatRef, scrollChatInnerRef, mobileStyleConfigs, handleSetUserDisplay, highlightedChat, handleGoToPost, handleReplyTo, replyOff } = props
@@ -11,7 +12,7 @@ const Module = props => {
             <div className={`${ChatStyles.chatLogContainer} Chat_ChatLogContainer`} ref={scrollChatInnerRef}>
             {
                 chatLog && Array.isArray(chatLog)
-                    ? chatLog.map((m, i) => (
+                    ? chatLog.filter(m => m?.type !== 'meta').map((m, i) => (
                         <div className={`${ChatStyles.chatLogItemContainer} Chat_ChatLogItemContainer ${m.type === 'donation' ? `${ChatStyles.chatLogItemContainerDonation} Chat_ChatLogItemContainerDonation` : ''}`} key={i} index={i}>
                             {
                                 m.id && m.content && m.author
@@ -20,7 +21,7 @@ const Module = props => {
                                             {
                                                 m?.avatar
                                                     ? <div className={`${ChatStyles.chatMessageAvatarContainer} Chat_ChatMessageAvatarContainer`}>
-                                                        <img src={m.avatar} />
+                                                        <img src={resolveImage(props, null, m.avatar)} style={{ borderRadius: '1rem' }} />
                                                     </div>
                                                     : null
                                             }

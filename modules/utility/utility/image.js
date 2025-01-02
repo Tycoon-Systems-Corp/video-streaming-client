@@ -1,0 +1,1 @@
+const resolveImage=(t,c,a,e)=>c?.rawBg&&"bg"===e?a:c?.raw&&"icon"===e?a.match(/^https?:.*/)?a:t.cdn.static+"/"+a:a?.match(/^https?:.*/)?a:t.cdn&&t.cdn.static&&0<t.cdn.static.length&&a?t.cdn.static+"/"+a:"img/default/greythumb.jpg";export{resolveImage};

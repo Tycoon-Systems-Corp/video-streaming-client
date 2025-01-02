@@ -1,1 +1,1 @@
-import{attemptBanUserChat,initialize,joinChat,requestBanTable,sendChat}from"./socket";export{attemptBanUserChat,initialize,joinChat,requestBanTable,sendChat};
+import{attemptBanUserChat,initialize,joinChat,joinDirectMessage,initializeDirectMessages,logMessageRead,requestBanTable,sendChat}from"./socket";export{attemptBanUserChat,initialize,joinChat,joinDirectMessage,initializeDirectMessages,logMessageRead,requestBanTable,sendChat};

@@ -413,3 +413,11 @@ button.vjs-control {
         width: 50px;
     }
 }
+
+// Ensures height of internal video is full height of containing player
+#player-main-player_html5_api { 
+    max-height: 100% !important;
+}
+.Watch_MediaType_Video .VideoPlayer_ChatBtn {
+    display: none;
+}

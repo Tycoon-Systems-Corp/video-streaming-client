@@ -31,7 +31,7 @@
 }
 
 .highlightBorder {
-    border: 1px solid grey;
+    border: 1px solid transparent;
     outline: 2px solid transparent;
 }
 
@@ -147,6 +147,7 @@
                 font-weight: 600;
                 padding: 0 .75rem;
                 border-radius: .5rem;
+                border: 1px solid transparent;
             }
         }
         .chatWarningContainer {
@@ -439,4 +440,10 @@
         border-radius: .5rem;
         border-width: 0;
     }
+}
+
+.commentCancelButton {
+    display: block;
+    background: none;
+    color: white;
 }

@@ -1,0 +1,167 @@
+.container {
+    position: fixed;
+    border-radius: 1rem 1rem 0 0;
+    background: black;
+    border: 2px solid rgba(128, 128, 128, .75);
+    right: 1rem;
+    bottom: -10px;
+    width: 200px;
+    height: 50px;
+    padding: .5rem;
+    padding-top: .35rem;
+    transition: 200ms;
+}
+
+.container:hover {
+    border: 2px solid rgba(128, 128, 128, 1);
+}
+
+.containerOpen {
+    height: 500px;
+    width: 450px;
+}
+
+.containerClosed {
+    cursor: pointer;
+}
+
+@media(max-height: 600px) {
+    .containerOpen {
+        height: 50vh;
+    }
+}
+
+@media(max-width: 600px) {
+    .containerOpen {
+        width: 90vw;
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    transition: 200ms;
+    .headerText {
+        font-weight: 700;
+        position: relative;
+    }
+    .headerIconContainer {
+        display: flex;
+        justify-content: space-between;
+        > div {
+            opacity: .5;
+        }
+        > div:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.notificationWaitingCountHeader {
+    position: absolute;
+    opacity: 1;
+    top: -7.5px;
+    right: -17.5px;
+    font-size: .9rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 1rem;
+    color: white;
+    background: red;
+    text-align: center;
+    align-content: center;
+    padding-right: .1rem;
+}
+
+.notificationWaitingConversationDot {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 12.5px;
+    height: 12.5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+
+.messagingFeedContainer {
+    margin-top: .5rem;
+    width: 100%;
+    height: 100%;
+    .searchBar {
+        width: 100% !important;
+        .searchBarInternal {
+            width: 100% !important;
+        }
+    }
+}
+
+.chatContainer {
+    width: 100%;
+    max-width: 100%;
+    height: calc(100% - 34px);
+    border: none;
+    .chatActionBar {
+        display: none;
+    }
+}
+
+.ContentPreviewNew {
+    font-weight: 700;
+}
+
+.conversationListContainer {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    transition: 200ms;
+    .conversationListItemContainer {
+        background: rgba(128, 128, 128, .25);
+        width: 100%;
+        border-radius: 2rem;
+        padding: .5rem;
+        cursor: pointer;
+        transition: 200ms;
+        position: relative;
+        .conversationListItemContainerInternal {
+            display: flex;
+            gap: .5rem;
+            .ConversationListItemMeta {
+                width: 100%;
+                margin-right: 1rem;
+                .ConversationNameHeader {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .UsernameLabel {
+                font-weight: 600;
+            }
+            .ContentPreview {
+                color: rgba(256, 256, 256, .75);
+                font-size: .9rem;
+                white-space: break-spaces;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+    .conversationListItemContainer:hover {
+        background: rgba(128, 128, 128, .5);
+    }
+}
+
+.ConversationListItemIcon {
+    height: 50px;
+    width: 50px;
+    border-radius: 3rem;
+}
+
+.messagingExternalChatContainer {
+    height: inherit;
+}

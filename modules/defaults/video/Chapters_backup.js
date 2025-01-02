@@ -11,7 +11,11 @@ import WatchPageStyles from '/modules/streaming/watch/WatchPage.module.scss'
 const Module = props => {
     return (
         <div className={`${props.className} Chapters_Container`}>
-            <h4 style={{ marginBottom: '.25rem' }}>Chapters</h4>
+            {
+                props?.hydratedTimeline?.length > 0
+                    ? <h4 style={{ marginBottom: '.25rem' }}>Chapters</h4>
+                    : null
+            }
             {
                 props?.hydratedTimeline?.map
                     ? <div className={`${WatchPageStyles.thumbnailsContainer} Thumbnails_Container tinyBar ${WatchPageStyles.ChaptersListContainer} Chapters_ChaptersListContainer`} ref={props?.chaptersContainerRef}>

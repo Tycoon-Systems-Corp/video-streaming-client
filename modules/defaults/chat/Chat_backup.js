@@ -1,6 +1,7 @@
 import React from 'react'
 import ChatStyles from '/modules/streaming/chat/Chat.module.scss'
 import WatchPageStyles from '/modules/streaming/watch/WatchPage.module.scss'
+import MessagingStyles from '/modules/social/messaging/Messaging.module.scss'
 import ChatLog from './ChatLog'
 import { DonateBar } from '/modules/streaming/chat'
 import { RecentChatTimeout, ReplyTo, ReplyToInfo, ModChatTools } from '/modules/streaming/chat/parts'
@@ -10,7 +11,7 @@ const Module = props => {
     const { chatInputRef, blockChat, handleChatTextChange, handleKeyPressChat, handleSendChat, currentChat, blockSend, blockSendForce, renderDonations, handleRunTasks, windowWidth } = props
 
     return (
-        <div className={`${props?.className ?? ''} ${WatchPageStyles.chatContainer} Chat_Container ${props?.chatState ? `${WatchPageStyles.chatOpen} Chat_ChatOpen` : `${WatchPageStyles.chatClosed} Chat_ChatClosed`} ${!props?.chatState && props?._isMobile ? `${WatchPageStyles.chatClosedMobile}` : null} WatchPage_ChatContainer`}>
+        <div className={`${props?.className ?? ''} ${WatchPageStyles.chatContainer} Chat_Container ${props?.chatState ? `${WatchPageStyles.chatOpen} Chat_ChatOpen` : `${WatchPageStyles.chatClosed} Chat_ChatClosed`} ${!props?.chatState && props?._isMobile ? `${WatchPageStyles.chatClosedMobile}` : null} WatchPage_ChatContainer ${props?.messageType === 'direct_message' ? `${MessagingStyles.chatContainer}` : null}`}>
             <div className={`${props.className} ${ChatStyles.chatContainer} Chat_ChatContainer`} style={{ height: `${!props.chatState ? 0 : windowWidth === null || windowWidth > 700 ? `100%` : '50vh'}` }} onClick={handleRunTasks}>
                 <ModChatTools { ...props } />
                 {renderDonations}

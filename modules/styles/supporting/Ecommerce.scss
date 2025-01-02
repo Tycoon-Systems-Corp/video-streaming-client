@@ -243,7 +243,6 @@
     width: max-content;
     background: #313131;
     border-radius: 1rem;
-    overflow: hidden;
     .Ecommerce_DonationButton {
         text-wrap: nowrap;
         align-content: center;
@@ -327,6 +326,9 @@
 .Ecommerce_CommandPanelButton {
     border-radius: 2rem;
     padding: .25rem .75rem;
+    display: flex;
+    height: -webkit-fill-available;
+    align-items: center;
 }
 
 .Ecommerce_Spinner {

@@ -2,6 +2,7 @@ import React from 'react'
 import SubMenu from '/modules/menu/SubMenu.js'
 import menuStyle from '/modules/menu/Menu.module.scss'
 import Search from './Search'
+import MessagingInternal from '/modules/social/messaging/MessagingInternal'
 
 const Module = props => {
     return (
@@ -22,6 +23,7 @@ const Module = props => {
                     </div>
                 </ol>
             </nav>
+            <MessagingInternal { ...props }></MessagingInternal>
         </div>
     )
 }
