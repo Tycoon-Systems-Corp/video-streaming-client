@@ -1,15 +1,13 @@
 import React from 'react'
-import Link from 'next/link'
-import { selectThisText } from '/modules/utility/utility/event'
-import { resolveCurrentStyle, resolveCurrentOption, resolveRegionBasedPrice, resolveMoneyFormat, westernMoneyFormat } from '/modules/utility/ecommerce'
+import { selectThisText } from 'tycoon-modules/utility/utility/event'
+import { resolveCurrentStyle, resolveCurrentOption, resolveRegionBasedPrice, resolveMoneyFormat, westernMoneyFormat } from 'tycoon-modules/utility/ecommerce'
 import Inventory from '@mui/icons-material/Inventory'
-import { OrderTitle, OrderItemPrice, OrderImage, OrderCard, OrderViewReceiptPage } from '/modules/ecommerce/receipt/order'
+import { OrderTitle, OrderItemPrice, OrderImage, OrderCard, OrderViewReceiptPage } from 'tycoon-modules/ecommerce/receipt/order'
 
 const Module = props => {
     
     let useSymbol
     const { m, selectDate, creation, currency, card, cardBilling } = props
-    console.log(props)
     return (
         <div>
             <div className={`Ecommerce_SingleOrderContainer`}>

@@ -1,8 +1,8 @@
 import React from 'react'
-import PageErrorModule from '/modules/utility/utility/component/PageErrorModule'
-import { BeginStream, CurrentlyStreaming, PermissionsModule, StreamOn, StreamTitleInput, StreamMoreSettings, StreamSettings, UpcomingStreams, StreamUpdateSettings, TerminateStream, NowStreaming} from '/modules/streaming/manager/parts'
-import Preview from '/modules/streaming/watch/preview/Preview'
-import { Username } from '/modules/onboarding/signin'
+import PageErrorModule from 'tycoon-modules/utility/utility/component/PageErrorModule'
+import { BeginStream, CurrentlyStreaming, PermissionsModule, StreamOn, StreamTitleInput, StreamMoreSettings, StreamSettings, UpcomingStreams, StreamUpdateSettings, TerminateStream, NowStreaming} from 'tycoon-modules/streaming/manager/parts'
+import Preview from 'tycoon-modules/streaming/watch/preview/Preview'
+import { Username } from 'tycoon-modules/onboarding/signin'
 
 const Module = props => {
     const { askEndStream, fetchBusy, currentlyStreaming, ManagerStyles, streamChecking, canStream, moreSettings, settingsHeight, moreSettingsContainerRef, handleAskEndStream, recordStream, recordStreamRef, handleSetRecordingStream } = props
@@ -18,7 +18,7 @@ const Module = props => {
                             <NowStreaming { ...props } />
                             {
                                 currentlyStreaming
-                                    ? <Preview { ...props } useWatchDataPreview={currentlyStreaming} />
+                                    ? <Preview { ...props } useWatchDataPreview={currentlyStreaming} noAds={true} />
                                     : null
                             }
                             <CurrentlyStreaming { ...props } />

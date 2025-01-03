@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '/modules/video/upload/upload.module.scss'
+import styles from 'tycoon-modules/video/upload/upload.module.scss'
 
 
 const Module = props => {
@@ -8,7 +8,7 @@ const Module = props => {
         <div onDrop={dropHandler} onDragOver={dropHandlerOver} onDragEnd={dropHandlerEnd} onDragLeave={dropHandlerEnd}>
             {
                 !processing && props?._loggedIn?.username && !currentVideo ?
-                    <div className={`${styles.fileUploadContainerExternal} ${draggingOver ? `${styles.fileUploadContainerDragging}` : null}`} style={{ minHeight: 75 + "vh", display: "flex" }}>
+                    <div className={`${styles.fileUploadContainerExternal} ${draggingOver ? `${styles.fileUploadContainerDragging}` : null}`} style={{ minHeight: 65 + "vh", display: "flex" }}>
                         <div className={`${styles.fileUploadContainer}`} style={{ display: "flex", flexDirection: "column", width: '100%' }}>
                             <div className={`${fetchBusy ? `fetchNotBusy ${styles.fileUploadFetchBusy}` : 'fetchNotBusy'}`}></div>
                             <div style={{ margin: 'auto' }}>

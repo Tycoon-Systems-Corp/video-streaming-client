@@ -1,5 +1,5 @@
 import React from 'react'
-import { AddComment, ReadComment } from '/modules/comment/parts'
+import { AddComment, ReadComment } from 'tycoon-modules/comment/parts'
 
 const Module = props => {
     return (

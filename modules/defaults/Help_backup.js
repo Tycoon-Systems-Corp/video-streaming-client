@@ -1,5 +1,5 @@
 import React from 'react'
-import { HelpClose, HelpSearch, HelpResult } from '/modules/help'
+import { HelpClose, HelpSearch, HelpResult } from 'tycoon-modules/help'
 
 const Module = props => {
     return (
@@ -11,7 +11,9 @@ const Module = props => {
                 {
                     Array.isArray(props.currentResults) && props.currentResults.length > 0
                         ? props.currentResults.map((m, i) => (
-                            <HelpResult { ...props } m={m} i={i}></HelpResult>
+                            <React.Fragment key={i}>
+                                <HelpResult { ...props } m={m} i={i}></HelpResult>
+                            </React.Fragment>
                         ))
                         : props.queryRef?.current?.value !== ''
                             ? <div></div>

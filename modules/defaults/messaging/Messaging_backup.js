@@ -1,8 +1,7 @@
 import React from 'react'
-import { Chat } from '/modules/streaming/chat'
+import { Chat } from 'tycoon-modules/streaming/chat'
 
 const Module = props => {
-    console.log('All Conversations', props?.allConversations)
     return (
         <div className={`${props?.MessagingStyles?.container} ${props?.messagingOpen ? `${props?.MessagingStyles?.containerOpen}` : `${props?.MessagingStyles?.containerClosed}`} Messaging_Container ${props.className}`} onClick={!props?.messagingOpen && props?.toggleOpenMessaging ? props.toggleOpenMessaging : null} modif={'open'}>
             <div className={`${props?.MessagingStyles?.header}`}>

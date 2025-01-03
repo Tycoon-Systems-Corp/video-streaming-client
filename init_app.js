@@ -492,8 +492,26 @@ if (fs.existsSync(useFile)) {
     console.log(useFile, 'File does not exist on', process.platform)
 }
 
+useFile = 'layout/messaging'
+if (fs.existsSync(useFile)) {
+    // Add your commands here
+    console.log(useFile, 'File exists on', process.platform)
+} else {
+    fs.mkdirSync(useFile)
+    console.log(useFile, 'File does not exist on', process.platform)
+}
 
-const pages = [ 'upload', 'w', 'p', 'pr', 'e', 'a', 'reset', 's', 'settings', 'a', 'r', 'c/index', 'c/[...id]' ] // Default pages
+useFile = 'layout/messaging/Messaging.js'
+if (fs.existsSync(useFile)) {
+    // Add your commands here
+    console.log(useFile, 'File exists on', process.platform)
+} else {
+    fs.copyFileSync('modules/defaults/messaging/Messaging_backup.js', useFile)
+    console.log(useFile, 'File does not exist on', process.platform)
+}
+
+
+const pages = [ 'upload', 'w', 'p', 'pr', 'e', 'a', 'reset', 's', 'settings', 'a', 'r', 'c/index', 'c/[...id]', 'terms', 'test', 'privacy' ] // Default pages
 
 for (let i = 0; i < pages.length; i++) {
     useFile = `pages/${pages[i]}.js`
@@ -504,11 +522,11 @@ for (let i = 0; i < pages.length; i++) {
         const page = `/* eslint-disable react-hooks/rules-of-hooks */
 
 import React from 'react'
-import { AppConfigLayout, PageContainer } from '/modules/internal'
+import { AppConfigLayout, PageContainer } from 'tycoon-modules/internal'
 import { pageDefaults } from '/app.config'
-import { getServerSidePropsDefault } from '/modules/utility.js'
+import { getServerSidePropsDefault } from 'tycoon-modules/utility.js'
 import { getServerSidePropsFunc } from '/appServer/serverProps'
-import { Menu } from '/modules/menu/'
+import { Menu } from 'tycoon-modules/menu/'
 
 const pageName = '${pages[i]}'
 

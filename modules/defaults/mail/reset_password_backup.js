@@ -1,5 +1,5 @@
 import globalEmailStyles from './globalEmailStyles'
-import masterEmailStyles from '/modules/utility/mail/masterEmailStyles'
+import masterEmailStyles from 'tycoon-modules/utility/mail/masterEmailStyles'
 import footer from './footer'
 
 

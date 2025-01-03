@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import { Player, ChaptersContainer } from '/modules/streaming/watch'
-import { Chat } from '/modules/streaming/chat'
-import DonateButton from '/modules/ecommerce/donate/DonateButton'
-import { CommentInternal } from '/modules/comment'
-import { LoadComments } from '/modules/comment/parts'
-import { selectThisText } from '/modules/utility/utility/event'
+import { Player, ChaptersContainer } from 'tycoon-modules/streaming/watch'
+import { Chat } from 'tycoon-modules/streaming/chat'
+import DonateButton from 'tycoon-modules/ecommerce/donate/DonateButton'
+import { CommentInternal } from 'tycoon-modules/comment'
+import { LoadComments } from 'tycoon-modules/comment/parts'
+import { selectThisText } from 'tycoon-modules/utility/utility/event'
 
 const Module = props => {
     return (
@@ -70,11 +70,9 @@ const Module = props => {
                                                             <div className={`${props?.WatchPageStyles?.likeDislikeContainer}`}>
                                                                 <button className={`${props?.WatchPageStyles?.like} Ecommerce_CommandPanelButton`} onClick={props?.handleInitiateAction} action='like' m={props?.watchData?.id} usetype={props?.watchData?.__typename} existing={`${props?.watchMeta?.liked}`}>
                                                                     <div className={`material-icons ${props?.watchMeta?.liked ? '' : 'material-icons-outlined'} Ecommerce_Like_Icon`}>thumb_up</div>
-                                                                    {/* <span>Subscribe</span> */}
                                                                 </button>
                                                                 <button className={`${props?.WatchPageStyles?.dislike} Ecommerce_CommandPanelButton`} onClick={props?.handleInitiateAction} action='dislike' m={props?.watchData?.id} usetype={props?.watchData?.__typename} existing={`${props?.watchMeta?.disliked}`}>
                                                                     <div className={`material-icons ${props?.watchMeta?.disliked ? '' : 'material-icons-outlined'} Ecommerce_Dislike_Icon`}>thumb_down</div>
-                                                                    {/* <span>Subscribe</span> */}
                                                                 </button>
                                                             </div>
                                                             <div selectValue={`${props?.watchData?.id && props?.domainUrl ? `${props.domainUrl}/w?v=${props.watchData.id}` : ''}`} onClick={selectThisText}>

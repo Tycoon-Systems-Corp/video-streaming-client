@@ -1,27 +1,27 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import React from 'react'
-import { AppConfigLayout, PageContainer } from '/modules/internal'
+import { AppConfigLayout, PageContainer } from 'tycoon-modules/internal'
 import { pageDefaults } from '/app.config'
-import { getServerSidePropsDefault } from '/modules/utility.js'
+import { getServerSidePropsDefault } from 'tycoon-modules/utility.js'
 import { getServerSidePropsFunc } from '/appServer/serverProps'
-import { Menu } from '/modules/menu/'
+import { Menu } from 'tycoon-modules/menu/'
 
 const pageName = 'r'
 
 export const page = props => {
-	return (
+    return (
         <React.Fragment>
             <PageContainer { ...props } pageName={pageName}>
                 <Menu></Menu>
                 <AppConfigLayout></AppConfigLayout>
             </PageContainer>
         </React.Fragment>
-	)
+    )
 }
 
 export const getServerSideProps = async (context) => {
-	let currentProps = await getServerSidePropsDefault(context, pageDefaults[pageName])
+    let currentProps = await getServerSidePropsDefault(context, pageDefaults[pageName])
     return await getServerSidePropsFunc(currentProps, context)
 }
 

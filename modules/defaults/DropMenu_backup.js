@@ -1,6 +1,6 @@
 import React from 'react'
-import { Account, Admin, Bug, Feedback, GoLive, Location, Login, OffersAndGifts, OnboardLogin, Orders, Payment, Settings, SignOut, User, Help, Invite, SimpleDropMenuLink, Upload } from '../modules/menu/parts'
-import { Username } from '../modules/onboarding/signin'
+import { Account, Admin, Bug, Feedback, GoLive, Location, Login, OffersAndGifts, OnboardLogin, Orders, Payment, Settings, SignOut, User, Help, Invite, SimpleDropMenuLink, Upload } from 'tycoon-modules/menu/parts'
+import { Username } from 'tycoon-modules/onboarding/signin'
 
 
 const Module = props => {

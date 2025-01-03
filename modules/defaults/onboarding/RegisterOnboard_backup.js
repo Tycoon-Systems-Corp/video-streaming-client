@@ -1,8 +1,10 @@
 import React from 'react'
-import { EmailOnboardInput, UsernameOnboardInput, GoogleSignIn, RegisterButton, PasswordOnboardInput } from '/modules/onboarding/signin/parts'
+import Link from 'next/link'
+import { EmailOnboardInput, UsernameOnboardInput, GoogleSignIn, RegisterButton, PasswordOnboardInput } from 'tycoon-modules/onboarding/signin/parts'
 
 const Module = props => {
     const { hideSignIn, pageError, googleSignInRendered, handleSetLoadRegister, handleClearPageError, handleClearUsername, availableUsername } = props
+    console.log(availableUsername)
     return (
         <React.Fragment>
             <div className={`SignIn_ManualContainer ${hideSignIn || props?._loggedIn ? `display-none` : null}`}>

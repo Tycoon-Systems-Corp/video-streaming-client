@@ -1,1 +1,1 @@
-import apiReq from"/modules/utility/api/apiReq";const submitNewPassword=async(s,e,a,i)=>{return await apiReq("/p/resetpassword",{newPassword:s,token:e,email:a})};export{submitNewPassword};
+import apiReq from"tycoon-modules/utility/api/apiReq";const submitNewPassword=async(s,e,a,o)=>{return await apiReq("/p/resetpassword",{newPassword:s,token:e,email:a})};export{submitNewPassword};
