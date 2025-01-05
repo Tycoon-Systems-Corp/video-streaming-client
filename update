@@ -4,3 +4,4 @@ git commit --amend --date="$(date)" -m "Modules Update ${date}"
 git pull upstream master
 git checkout origin/master -- tycoon-client-modules-dist.tar.gz
 curl -O https://d2zsu4v7czjhvo.cloudfront.net/develop/tycoon-modules/tycoon-client-modules-dist.tar.gz
+./extract_modules_dist
