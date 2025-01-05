@@ -16,13 +16,18 @@ const nextConfig = {
 		// You can modify the `config` object as needed
 
 		// Example: Add resolve alias for modules folder
-		config.resolve.alias['tycoon-modules'] = path.join(__dirname, 'modules/')
+		config.resolve.alias['@tycoonsystems/tycoon-modules'] = path.join(__dirname, 'modules/')
 		config.resolve.alias['/appServer'] = path.join(__dirname, 'appServer/')
 		config.resolve.alias['/app.config'] = path.join(__dirname, 'app.config.js')
 		config.resolve.alias['/customModules'] = path.join(__dirname, 'customModules')
 		config.resolve.alias['/styles'] = path.join(__dirname, 'styles/')
 		config.resolve.alias['/layout'] = path.join(__dirname, 'layout/')
 
+		config.resolve.modules = [
+			path.resolve(__dirname, 'modules'),  // Look in the 'modules' directory first
+			'node_modules'                       // Fall back to 'node_modules' if not found in 'modules'
+		]
+		
 		// Example: Add Babel loader for JavaScript modules/functions
 		if (!isServer) {
 			config.module.rules.push({

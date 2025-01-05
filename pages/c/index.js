@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import React from 'react'
-import { AppConfigLayout, PageContainer } from 'tycoon-modules/internal'
+import { AppConfigLayout, PageContainer } from '@tycoonsystems/tycoon-modules/internal'
 import { pageDefaults } from '/app.config'
-import { getServerSidePropsDefault } from 'tycoon-modules/utility.js'
+import { getServerSidePropsDefault } from '@tycoonsystems/tycoon-modules/utility.js'
 import { getServerSidePropsFunc } from '/appServer/serverProps'
-import { Menu } from 'tycoon-modules/menu/'
+import { Menu } from '@tycoonsystems/tycoon-modules/menu/'
 
 const pageName = 'c/index'
 

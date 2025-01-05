@@ -82,6 +82,7 @@ layout/*
 appServer/*
 !*/appServer/defaults/*
 !*appServer/defaults/
+/modules
 
 # Extra Ignore Files Here. Uncomment after initialization (node init_app.js)
 # !*customModules/middleware/*

@@ -8,7 +8,7 @@
       "/modules/*": [
         "modules/*"
       ],
-      "tycoon-modules/*": [
+      "@tycoonsystems/tycoon-modules": [
         "modules/*"
       ]
     },

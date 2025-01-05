@@ -2,9 +2,9 @@
 // If you want to use this as a template for another page, copy entire file and rename "pageName". Use pageDefault variable in app.config.js appropriately.
 
 import React from 'react'
-import { PageContainer } from 'tycoon-modules/internal'
+import { PageContainer } from '@tycoonsystems/tycoon-modules/internal'
 import { pageDefaults } from '/app.config'
-import { getServerSidePropsDefault } from 'tycoon-modules/utility.js'
+import { getServerSidePropsDefault } from '@tycoonsystems/tycoon-modules/utility.js'
 
 const pageName = 'admin'
 
