@@ -71,6 +71,7 @@ public/doc/internal
 styles/custom
 styles/custom/*
 styles/styles.scss
+styles/theme.scss
 styles/appstyles/*
 
 # Tycoon Systems - Build ignore
@@ -94,5 +95,6 @@ appServer/*
 # !*layout/*
 # !*app.config.js
 # !*app.schema.js
+# !*styles/theme.scss
 
 # Project Ignore Files

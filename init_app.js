@@ -520,6 +520,15 @@ if (fs.existsSync(useFile)) {
     console.log(useFile, 'File does not exist on', process.platform)
 }
 
+useFile = 'layout/ThinMenu.js'
+if (fs.existsSync(useFile)) {
+    // Add your commands here
+    console.log(useFile, 'File exists on', process.platform)
+} else {
+    fs.copyFileSync(`${usePath}/defaults/ThinMenu_backup.js`, useFile)
+    console.log(useFile, 'File does not exist on', process.platform)
+}
+
 useFile = 'styles/theme.scss'
 if (fs.existsSync(useFile)) {
     // Add your commands here
