@@ -138,6 +138,15 @@ if (fs.existsSync(useFile)) {
     console.log(useFile, 'File does not exist on', process.platform)
 }
 
+useFile = 'layout'
+if (fs.existsSync(useFile)) {
+    // Add your commands here
+    console.log(useFile, 'File exists on', process.platform)
+} else {
+    fs.mkdirSync(useFile)
+    console.log(useFile, 'File does not exist on', process.platform)
+}
+
 useFile = 'layout/index.js'
 fs.copyFileSync(`${usePath}/defaults/index_backup.js`, useFile)
 console.log(useFile, 'Copied file on', process.platform)
