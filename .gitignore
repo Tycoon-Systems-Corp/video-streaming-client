@@ -96,5 +96,6 @@ appServer/*
 # !*app.config.js
 # !*app.schema.js
 # !*styles/theme.scss
+# !*customModules/index.js
 
 # Project Ignore Files
